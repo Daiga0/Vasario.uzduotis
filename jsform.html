@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Užduotis: aktyvi kontaktų forma</title>
@@ -7,8 +8,43 @@
     <body>
         <form target="" onsubmit="checkForm()">
             <label>Vardas</label>
-            <input type="text" id="firstname" name="firstname" />
-            <input type="submit" value="submit" />
+            <br>
+              <input type="text" id="firstname" name="firstname" minlength="3" maxlength="20" required/>
+            <br>
+            <label>Pavardė<label>
+              <br>
+              <input type="text" id="lastname" name="lastname" minlength="3" maxlength="20" required/>
+              <br>
+            <label>Pristatymo adresas<label>
+              <br>
+              <input type="text" id="address" name="address" minlength="3" maxlength="100" required/>
+              <br>
+              <label>Šalis<label>
+                <br>
+            <input type="text" id="country" name="country" minlength="3" maxlength="20" required/>
+            <br>
+            <label>Pašto kodas<label>
+              <br>
+            <input type="text" id="postalcode" name="postalcode" minlength="3" maxlength="20" required/>  
+            <br>
+            <label>Telefono numeris<label>
+              <br>
+              <input type="tel" id="phonenumber" name="phonenumber" maxlength="9" minlength="9" placeholder="6##-#####" required/>
+              
+              <br>
+              <label>Komentaras<label>
+                <br>
+                <textarea name="comment" rows="4" cols="30">
+                  </textarea>
+                <br>
+            <input type="submit" value="Pateikti" required/>
+            <button onclick="myFunction()">Pateikti</button>
+            <script>
+            function myFunction() {
+            confirm("Press a button!");
+          }
+          </script>
+
         </form>
     </body>
 </html>
